@@ -3,13 +3,18 @@ class Solution {
         int min_price = Integer.MAX_VALUE;
         int max_profit = 0;
         int n = prices.length;  
-        int buying_price = prices[0];
+        // int buying_price = prices[0];
 
-        for (int i=1; i<n ;i++){
-            min_price = Math.min(buying_price , prices[i]);
-            int profit = prices[i] - buying_price;
-            buying_price = min_price;
-            max_profit = Math.max(max_profit,profit);
+        for (int i=0; i<n ;i++){
+            int selling_price = prices[i];
+            
+            if (min_price < selling_price){
+                int profit = selling_price - min_price;
+                max_profit = Math.max(profit,max_profit);
+            }
+            else{
+                min_price = selling_price;
+            }
         }
         return max_profit;
         

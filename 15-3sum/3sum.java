@@ -24,7 +24,7 @@ class Solution {
             }
     
         }
-        return new ArrayList(results);
+        return new ArrayList<> (results);
         
     }
 }

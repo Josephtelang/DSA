@@ -10,7 +10,6 @@ class Solution {
                 int sum = nums[i]+nums[low]+nums[high];
                 if(sum == 0){
                     List<Integer> triplet = Arrays.asList(nums[i],nums[low],nums[high]);
-                    Collections.sort(triplet);
                     results.add(triplet);
                     low ++;
                     high --;

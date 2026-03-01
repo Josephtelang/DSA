@@ -22,9 +22,8 @@ class Solution {
 
         if (i==-1){
             while(j>=0){
-                nums1[k] = nums2[j];
-                k--;
-                j--;
+                nums1[k--] = nums2[j--];
+
             }
         }
 

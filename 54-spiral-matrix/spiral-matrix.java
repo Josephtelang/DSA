@@ -14,7 +14,7 @@ class Solution {
                 result.add(matrix[start_row][j]);
             }
 
-            // left
+            // right
             for (int i=start_row +1 ; i<= end_row ; i++){
                 System.out.print(matrix[i][end_col]+" ");
                 result.add(matrix[i][end_col]);
@@ -29,7 +29,7 @@ class Solution {
                 result.add(matrix[end_row][j]);
             }
 
-            // right
+            // left
             for (int i = end_row -1 ; i>= start_row+1 ; i-- ){
                 if (start_col == end_col){
                     return result;

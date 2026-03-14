@@ -9,17 +9,17 @@ class Solution {
             while(i<j && Character.isLetterOrDigit(s.charAt(i))==false){
                 i++;
             }
-            while(i<j && Character.isLetterOrDigit(s.charAt(j))==false){
+            while(i<j && !Character.isLetterOrDigit(s.charAt(j))){
                 j--;
             }
 
             if(Character.toLowerCase(s.charAt(i))!=Character.toLowerCase(s.charAt(j))){
                 return false;
             }
-            else{
-                i++;
-                j--;
-            }
+            
+            i++;
+            j--;
+            
             
 
         }

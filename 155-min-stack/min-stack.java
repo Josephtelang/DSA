@@ -19,7 +19,7 @@ class MinStack {
             this.top_mini ++;
             this.array_miniStack[this.top_mini] = val;
         }
-        else if(this.top_mini == 0 | this.top_mini >0){
+        else if(this.top_mini >= 0){
             this.top_mini++;
             if( this.array_miniStack[this.top_mini-1] >= val){
 

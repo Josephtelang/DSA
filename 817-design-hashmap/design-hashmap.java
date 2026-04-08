@@ -2,23 +2,23 @@ class MyHashMap {
     int array[];
 
     public MyHashMap() {
-        this.array = new int[1000001];
+        array = new int[1000001];
         Arrays.fill(array,-1);
         
     }
     
     public void put(int key, int value) {
-        this.array[key] = value;
+        array[key] = value;
         
     }
     
     public int get(int key) {
-        return this.array[key];
+        return array[key];
         
     }
     
     public void remove(int key) {
-        this.array[key] = -1;
+        array[key] = -1;
         
     }
 }

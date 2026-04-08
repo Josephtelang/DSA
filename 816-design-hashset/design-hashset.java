@@ -2,27 +2,25 @@ class MyHashSet {
     boolean array[];
 
     public MyHashSet() {
-        this.array = new boolean[((int)Math.pow(10,6)+1)];
+        this.array = new boolean[1000001]; //1,000,001 -> 10^6+1
 
         
     }
     
     public void add(int key) {
-        if(array[key]==false){
-            array[key] = true;
-        }
+        array[key] = true;
+        
         
     }
     
     public void remove(int key) {
-        if(array[key] == true){
-            array[key]= false;
-        }
+        array[key]= false;
+        
         
     }
     
     public boolean contains(int key) {
-            return array[key]==true? true : false;
+            return array[key];
     }
         
     

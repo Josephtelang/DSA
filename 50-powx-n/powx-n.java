@@ -7,7 +7,7 @@ class Solution {
         if (n==0){
             return 1;
         }
-        if(n <=0){
+        if(n <0){
             return 1.0/myPow(x,-N);
         }
     

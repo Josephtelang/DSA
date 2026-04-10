@@ -1,26 +1,31 @@
 class Solution {
-    public double myPow(double x, long n) {
-        if (n==1){
+    public double myPow(double x, int n) {
+        return helper(x,n);
+
+    }
+
+    private double helper(double x, long n){
+         if (n==1){
             return x;
         }
-        long N= n;
+        
         if (n==0){
             return 1;
         }
-        if(n <0){
-            return 1.0/myPow(x,-N);
+        if(n <=0){
+            return 1/helper(x,-n);
         }
     
 
-        double halfPower = myPow(x,N/2);
+        double halfPower = helper(x,n/2);
         double halfPowerSquare = halfPower * halfPower;
 
         //odd
-        if(N%2 !=0){
+        if(n%2 !=0){
             halfPowerSquare = x*halfPowerSquare;
         }
 
         return halfPowerSquare;
+       }
         
-    }
 }

@@ -1,6 +1,6 @@
 class Solution {
     public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList();
+        List<String> result = new ArrayList<String>();
         return generate(n,0,0,"",result);
 
 
@@ -10,7 +10,7 @@ class Solution {
     public static List<String> generate(int n , int open , int close , String currentStr , List<String> result){
         if (currentStr.length() == n*2){
             result.add(currentStr);
-            
+            return result; // return is not needed it is for readability
         }
 
         if (close<open){

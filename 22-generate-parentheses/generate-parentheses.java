@@ -10,7 +10,7 @@ class Solution {
     public static List<String> generate(int n , int open , int close , String currentStr , List<String> result){
         if (currentStr.length() == n*2){
             result.add(currentStr);
-            return result;
+            
         }
 
         if (close<open){

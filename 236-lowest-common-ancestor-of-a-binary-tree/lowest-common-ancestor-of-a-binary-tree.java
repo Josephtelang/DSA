@@ -52,7 +52,26 @@ class Solution {
         return path1.get(i-1);
 
     }
+
+    public TreeNode lca2(TreeNode root, TreeNode p, TreeNode q){
+        if(root==null || root == p || root == q){
+            return root;
+        }
+
+        TreeNode foundLeft = lca2(root.left,p,q);
+        TreeNode foundRight = lca2(root.right,p,q);
+
+        if(foundLeft == null){
+            return foundRight;
+        }
+        if(foundRight == null){
+            return foundLeft;
+        }
+
+        return root;
+    }
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        return lca1(root,p,q);
+        // return lca1(root,p,q);
+        return lca2(root,p,q);
     }
 }

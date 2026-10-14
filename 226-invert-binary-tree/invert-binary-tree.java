@@ -19,12 +19,11 @@ class Solution {
             return null;
         }
 
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
+        TreeNode leftMirror = invertTree(root.left);
+        TreeNode rightMirror = invertTree(root.right);
 
-        invertTree(root.left);
-        invertTree(root.right);
+        root.left = rightMirror;
+        root.right = leftMirror;
 
         return root;
     }

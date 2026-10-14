@@ -32,7 +32,6 @@ class Solution {
         }
         BSTpath(root.left,list,str);
         BSTpath(root.right,list,str);
-        str = str.replace(currStr,"");
     }
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();
